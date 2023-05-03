@@ -1,6 +1,6 @@
 /*in this program , we will check how many elements in an array contain an even number of digits */
 
-public class evennumberofdigits {
+public class Linearsearch3 {
     public static void main(String[] args) {
         System.out.println("Hello World");
         int[] nums = {12, 345, 2, 6, 7896};
