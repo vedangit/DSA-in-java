@@ -1,10 +1,24 @@
-/*in this program , we will check how many elements in an array contain an even number of digits */
+//this program takes the input from 
 
+import java.util.Scanner;
 public class Linearsearch3 {
     public static void main(String[] args) {
         System.out.println("Hello World");
+        int n;  
+Scanner sc=new Scanner(System.in);  
+System.out.println("Enter the number of elements you want to store: ");  
+//reading the number of elements from the that we want to enter  
+n=sc.nextInt();  
+//creates an array in the memory of length 10  
+int[] array = new int[10];  
+System.out.println("Enter the elements of the array: ");  
+for(int i=0; i<n; i++)  
+{  
+//reading array elements from the user   
+array[i]=sc.nextInt();  
+}  
         int[] nums = {12, 345, 2, 6, 7896};
-        System.out.println(findnumbers(nums));
+        System.out.println(findnumbers(array));
     }
 
 //this function will go through the array and count the number of numbers who have even number of digits
@@ -48,5 +62,3 @@ public class Linearsearch3 {
         return number % 2 == 0;
     }
 }
-
-  
