@@ -49,17 +49,17 @@ public class tree {
     }
 
     public void display() {
-        display(root, "", true);
+        display(root, "");
     }
-    
-    private void display(node node, String prefix, boolean isLeft) {
-        if (node != null) {
-            System.out.println(prefix + (isLeft ? "├── " : "└── ") + node.value);
-            display(node.left, prefix + (isLeft ? "│   " : "    "), true);
-            display(node.right, prefix + (isLeft ? "│   " : "    "), false);
+
+    private void display(node node, String indent) {
+        if (node == null) {
+            return;
         }
+        System.out.println(indent + node.value);
+        display(node.left, indent + "\t");
+        display(node.right, indent + "\t");
     }
-    
 
     public void preOrder() {
         preOrder(root);
